@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Button</title>
+</head>
+<body>
+    <button onclick="downloadFile()">Baixar Arquivo</button>
+
+    <script>
+        function downloadFile() {
+            // URL do arquivo que será baixado
+            var fileUrl = 'URL_DO_ARQUIVO_AQUI';
+
+            // Cria um elemento de link temporário
+            var link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'nome_do_arquivo.extensao';
+
+            // Adiciona o elemento ao corpo da página
+            document.body.appendChild(link);
+
+            // Simula um clique no link para iniciar o download
+            link.click();
+
+            // Remove o elemento do corpo da página
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
